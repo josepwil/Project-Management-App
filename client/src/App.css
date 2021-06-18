@@ -1,38 +1,74 @@
 .App {
   text-align: center;
+  box-sizing: border-box;
+  width: 100vw;
+  height: 100vh;
+  background-image: url("https://image.freepik.com/free-vector/simple-white-abstract-gradient-background_53876-99910.jpg");
+  background-size: cover;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.landingPageImage {
+  height: 50vh;
+  width: 40vw;
+  background-image: url("https://image.freepik.com/free-vector/business-team-putting-together-jigsaw-puzzle-isolated-flat-vector-illustration-cartoon-partners-working-connection-teamwork-partnership-cooperation-concept_74855-9814.jpg");
+  background-position: center;
+  background-size: cover;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.landingPageContainer {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.landingPageDescription {
+  width: 30vw;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  background-color: white;
+  border-radius: 12px;
 }
 
-.App-link {
-  color: #61dafb;
+.logo {
+  color: #59bfff;
+  align-self: center;
+  justify-self: start;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.btnTryItFree {
+  padding: 2px;
+  width: 20%;
+  align-self: center;
+  text-decoration: none;
+  border: none;
+  background-color: #a9dbfa;
+  border-radius: 12px;
+  color: #23395d;
+  font-weight: bold;
+  cursor: pointer;
+  transition: width 0.5s;
+  margin-bottom: 20px
+}
+.btnTryItFree:hover {
+  width: 18%;
+}
+
+@media only screen and (max-width: 600px) {
+  .landingPageContainer {
+    flex-direction: column;
+    justify-content: center;
   }
-  to {
-    transform: rotate(360deg);
+
+  .landingPageDescription {
+    width: 96vw;
+  }
+
+  .landingPageImage {
+    width: 96vw;
+    margin-bottom: 20px;
   }
 }
