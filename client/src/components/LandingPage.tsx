@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom"
+
 const LandingPage = () => {
   return(
     <div className="landingPageContainer">
@@ -8,7 +10,7 @@ const LandingPage = () => {
         <h2 className="logo">Teamli</h2>
         <p>Teamli makes collaboration easy, with a wide range of features from calendars to kaban boards. Teamli seamlessly connects you with your team and keeps projects on track.</p>
         {/* takes you to sign up page */}
-        <button className="btnTryItFree">Try it free</button>
+        <Link to="/signup" className="btnTryItFree">Try it free</Link>
       </div>
     </div>
   )

@@ -7,6 +7,7 @@ import {
   Route,
 } from "react-router-dom";
 import LandingPage from './components/LandingPage';
+import SignUpPage from './components/SignUpPage';
 
 
 function App() {
@@ -25,6 +26,9 @@ function App() {
     <div className="App">
       <Router>
         <Switch>
+          <Route path="/signup">
+            <SignUpPage />
+          </Route>
           <Route path="/">
             <LandingPage />
           </Route>
