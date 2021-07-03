@@ -10,13 +10,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_06_26_192511) do
+ActiveRecord::Schema.define(version: 2021_07_03_234851) do
 
   create_table "admins", force: :cascade do |t|
-    t.string "name"
     t.integer "organization_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "email"
+    t.string "first_name"
+    t.string "last_name"
+    t.string "password"
     t.index ["organization_id"], name: "index_admins_on_organization_id"
   end
 
@@ -24,6 +27,7 @@ ActiveRecord::Schema.define(version: 2021_06_26_192511) do
     t.string "name"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "plan"
   end
 
   create_table "users", force: :cascade do |t|

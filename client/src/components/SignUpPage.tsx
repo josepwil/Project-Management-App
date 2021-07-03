@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import axios from 'axios'
 
 const SignUpPage = () => {
   const [organization, setOrganization] = useState('')
@@ -10,6 +11,22 @@ const SignUpPage = () => {
 
   const handleSubmit = (event: any) => {
     event.preventDefault();
+
+    axios.post('/admins', {
+      organization: organization,
+      email: email,
+      password: password,
+      firstName: firstName,
+      lastName: lastName,
+      plan: plan
+    })
+      .then(res => {
+        console.log(res)
+      })
+      .catch(err => {
+        console.log(err)
+      })
+
   }
 
   return(
