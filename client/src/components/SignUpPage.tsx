@@ -13,12 +13,16 @@ const SignUpPage = () => {
     event.preventDefault();
 
     axios.post('/admins', {
-      organization: organization,
-      email: email,
-      password: password,
-      firstName: firstName,
-      lastName: lastName,
-      plan: plan
+      organization: {
+        organizationName: organization,
+        plan: plan
+      },
+      admin: {
+        email: email,
+        password: password,
+        firstName: firstName,
+        lastName: lastName,
+      }
     })
       .then(res => {
         console.log(res)
