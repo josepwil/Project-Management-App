@@ -1,9 +1,13 @@
 class AdminsController < ApplicationController
   def create
-    puts params
     @organization = Organization.new(organization_params)
     @admin = Admin.new(admin_params)
-    if @admin.save && @organization.save
+
+    if @organization.save
+      @admin.organization_id = @organization.id
+    end
+
+    if @admin.save
       render json: {
         status: 'created',
         admin: @admin,
