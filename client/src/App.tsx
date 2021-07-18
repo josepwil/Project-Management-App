@@ -9,6 +9,7 @@ import {
 import LandingPage from './components/LandingPage';
 import SignUpPage from './components/SignUpPage';
 import LoginPage from './components/LoginPage';
+import Home from './components/Home';
 
 
 function App() {
@@ -32,6 +33,9 @@ function App() {
           </Route>
           <Route path="/login">
             <LoginPage />
+          </Route>
+          <Route path="/home">
+            <Home />
           </Route>
           <Route path="/">
             <LandingPage />
