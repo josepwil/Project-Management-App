@@ -3,4 +3,7 @@ Rails.application.routes.draw do
   root to: 'welcome#index'
   # resources :users, only: [:create]
   resources :admins, only: [:create]
+  post '/login' => 'sessions#create'
+  post '/logout' => 'sessions#destroy'
+  get '/logged_in' => 'sessions#is_logged_in?'
 end
