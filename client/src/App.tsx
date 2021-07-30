@@ -10,6 +10,7 @@ import LandingPage from './components/LandingPage';
 import SignUpPage from './components/SignUpPage';
 import LoginPage from './components/LoginPage';
 import Home from './components/Home';
+import CreateNewUser from './components/CreateNewUser';
 
 
 function App() {
@@ -33,6 +34,9 @@ function App() {
           </Route>
           <Route path="/login">
             <LoginPage />
+          </Route>
+          <Route path="/create_new_user">
+            <CreateNewUser />
           </Route>
           <Route path="/home">
             <Home />
